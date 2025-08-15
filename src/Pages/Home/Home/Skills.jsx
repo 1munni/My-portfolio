@@ -7,38 +7,36 @@ import {
   SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiVite, SiVercel
 } from 'react-icons/si';
 
-// Individual skill item
-const SkillItem = ({ icon: Icon, label, color }) => (
-  <div className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-md transition transform hover:scale-105">
-    <Icon className="text-xl" style={{ color }} />
-    <span className="text-sm font-medium">{label}</span>
-  </div>
-);
-
-// Grouping each card (Frontend, Backend, etc)
+// Unified Skill Card Component
 const SkillCard = ({ title, skills }) => (
-<section id="skills" >  <div className="bg-white/5 p-6 rounded-xl shadow-lg flex flex-col gap-4 border border-white/10 hover:bg-white/10 transition hover:shadow-2xl transform hover:-translate-y-1">
-    <h3 className="text-lg font-semibold text-[#85B7C2]">{title}</h3>
-    <div className="flex flex-wrap gap-3">
+  <div className="bg-white/7 p-6 rounded-xl shadow-lg border border-white/10 hover:bg-white/10 transition hover:shadow-2xl transform hover:-translate-y-1 min-h-[300px] flex flex-col">
+    <h3 className="text-lg font-semibold text-[#85B7C2] mb-4">{title}</h3>
+    <div className="flex flex-wrap gap-3 mt-auto">
       {skills.map((skill, index) => (
-        <SkillItem key={index} icon={skill.icon} label={skill.label} color={skill.color} />
+        <div
+          key={index}
+          className="flex items-center gap-2 px-4 py-2 bg-[#12526d] hover:bg-[#147393] rounded-md transition transform hover:scale-105"
+        >
+          <skill.icon className="text-xl" style={{ color: skill.color }} />
+          <span className="text-sm font-medium text-white">{skill.label}</span>
+        </div>
       ))}
     </div>
-  </div> </section>
+  </div>
 );
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-[#0b2230] text-white py-16 px-4 md:px-12">
+    <section id="skills" className="bg-[#12526D] scroll-smooth text-white py-16 px-4 md:px-12 rounded-2xl mb-12">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#D16EFF] mb-3">Skills & Technologies</h2>
+        <h2 className="text-4xl md:text-5xl font-medium text-shadow-white mb-3">Skills & Technologies</h2>
+        
         <p className="text-gray-300 text-sm md:text-base mb-12 max-w-2xl mx-auto">
-          Crafting digital experiences with cutting-edge technologies and modern development practices, combined with proven expertise in professional content creation.
+          Developing digital experiences utilizing state-of-the-art technologies and contemporary development methodologies, complemented by demonstrated expertise in professional content creation.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
           
-          {/* ➤ Frontend */}
           <SkillCard
             title="Frontend"
             skills={[
@@ -50,7 +48,6 @@ const Skills = () => {
             ]}
           />
 
-          {/* ➤ Backend */}
           <SkillCard
             title="Backend"
             skills={[
@@ -61,7 +58,6 @@ const Skills = () => {
             ]}
           />
 
-          {/* ➤ Tools & Platforms */}
           <SkillCard
             title="Tools & Platforms"
             skills={[
@@ -73,14 +69,13 @@ const Skills = () => {
             ]}
           />
 
-          {/* ➤ Content Writing */}
           <SkillCard
             title="Content Writing"
             skills={[
               { icon: FaRegFileAlt, label: "Web Content Writing", color: "#FFD700" },
               { icon: FaRegFileAlt, label: "SEO Blogging", color: "#FFD700" },
               { icon: FaRegFileAlt, label: "WordPress Writing", color: "#FFD700" },
-              { icon: FaRegFileAlt, label: "Technical Documentation", color: "#FFD700" },
+           
             ]}
           />
         </div>
