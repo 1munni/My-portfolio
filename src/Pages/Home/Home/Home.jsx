@@ -7,15 +7,18 @@ import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Education from './Education';
 import ContactSection from './Contact';
+import Projects from './Project';
 
 const Home = () => {
     return (
 <div>
     <HeroSection></HeroSection>
     <AboutMe></AboutMe>
+     <Projects></Projects>
     <Skills></Skills>
     <Education></Education>
     <ContactSection></ContactSection>
+   
 </div>
     );
 };

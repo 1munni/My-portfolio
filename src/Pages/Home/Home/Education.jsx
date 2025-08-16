@@ -2,7 +2,7 @@ import React from 'react';
 
 const Education = () => {
     return (
-        <section id="education" className="py-8 bg-base-300 dark:bg-gray-800 transition-colors duration-500 rounded-xl shadow-lg">
+        <section id="education" className="py-8 bg-base-300 dark:bg-gray-800 transition-colors duration-500 rounded-xl shadow-lg mb-12">
             <div className="container mx-auto p-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-gray-100 mb-8">
                     Education & Experience

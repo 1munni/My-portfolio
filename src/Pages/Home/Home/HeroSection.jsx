@@ -21,7 +21,7 @@ const HeroSection = () => {
                         <a href="https://www.facebook.com/zs.munni" aria-label="Facebook Profile"><FaFacebookSquare size={36} className='text-gray-800 hover:text-[#12526d] transition-colors duration-300'/></a>
                     </div>
                   <a
-  href="#projects"
+  href=""
   className="mt-8 inline-flex items-center gap-2 bg-[#12526d] text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-white hover:text-[#12526d] transition-colors duration-300"
 >
   Resume <FaArrowDown />

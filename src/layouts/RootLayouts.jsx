@@ -19,7 +19,7 @@ const RootLayouts = () => {
       </main>
            
            {/* Footer */}
-      <footer className="max-w-6xl mx-auto px-4">
+      <footer  className="text-base-content  bg-white/80 dark:bg-gray-900/80  ">
         <Footer />
       </footer>
         </div>
